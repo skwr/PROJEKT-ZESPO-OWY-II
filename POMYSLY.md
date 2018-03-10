@@ -1,1 +1,1 @@
-#Pomysły: 
+﻿Pomysły: 
