@@ -1,1 +1,3 @@
 ﻿Pomysły: 
+
+-komunikator
