@@ -1,0 +1,29 @@
+<form id="form">
+	<input type="submit" value="Button"></input>
+</form>
+
+<script>
+	var form = document.getElementById('form');
+	form.onsubmit = function(e)
+	{
+		e.preventDefault();
+		console.log('pressed');
+		
+		var http = new XMLHttpRequest();
+		var url = '/notes';
+		var params = 'p1=jeden&p2=dwa';
+		http.open("POST", url, true);
+		
+		http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+		
+		http.onreadystatechange = function()
+		{
+			if(http.readyState == 4 && http.status == 200)
+			{
+				alert(http.response);
+			}
+		}
+		
+		http.send(params);
+	}
+</script>
