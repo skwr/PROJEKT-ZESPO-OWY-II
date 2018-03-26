@@ -1,17 +1,26 @@
 <form id="form">
+	<input type="text" id="inputText"></input>
 	<input type="submit" value="Button"></input>
 </form>
 
+<script src="/socket.io/socket.io.js"></script>
+
 <script>
 	var form = document.getElementById('form');
+	
+	var socket = io.connect();
+	
+	
 	form.onsubmit = function(e)
 	{
+		var text = document.getElementById('inputText');
 		e.preventDefault();
 		console.log('pressed');
 		
 		var http = new XMLHttpRequest();
 		var url = '/notes';
-		var params = 'p1=jeden&p2=dwa';
+		
+		var params = 'text=' + text.value;
 		http.open("POST", url, true);
 		
 		http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -20,10 +29,16 @@
 		{
 			if(http.readyState == 4 && http.status == 200)
 			{
+			
 				alert(http.response);
 			}
 		}
 		
 		http.send(params);
 	}
+	
+	socket.on('res', function(message)
+	{
+		console.log('socket - ' + message);
+	});
 </script>
