@@ -1,19 +1,14 @@
-
-//const noteRoutes = require('./note_routes');
 module.exports = function(app, io) {
-  app.post('/notes', (req, res) => {
-		console.log(req.body)
-		message = req.body.text;
-		io.sockets.emit('res', message);
-		
-		
-		
-		
+  app.post('/sendMessage', (req, res) => {
+	//wywolywane w momencie odebrania żądania 'sendMessage'
 	
-		res.send(message)
+	console.log(req.body)	//log tresci przekazanej w żądaniu
+	message = req.body.text;	//wyłuskanie wiadomosci z tresci przekazanej w żądaniu
+	
+	io.sockets.emit('newMessage', message);	//wywolanie eventu socket.io - rozeslanie zdobytej wiadomosci do wszystkich podlaczonych clientów
+		
+		
+	res.send(message)	//odpowiedz na żądanie
 	});
-  
-  //noteRoutes(app, db);
-  
-  // Other route groups could go here, in the future
+
 };
