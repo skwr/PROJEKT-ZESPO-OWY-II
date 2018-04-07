@@ -20,7 +20,13 @@ namespace WinClient
 
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent();  //inicjalizacja komponentow
+            Width = 400;    //tymczasowe ustawienie stalej szerokosci okna
+            Height = Screen.PrimaryScreen.WorkingArea.Height;   //ustawienie wysokosci okna w zaleznosci od wielkosci ekranu komputera
+
+            Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - Width / 2, 0);    //ustawienie okna programu na srodku ekranu
+
+            MessagesBox messagesBox = new MessagesBox(mainPanel);   //stworzenie instancji obiektu wyswietlajacego kolejne wiadomosci
 
             socketIoMenager();  //inicjalizacja polaczenia z serverem; docelowo wywolywac po wybraniu NICKU, dodac obsluge braku polaczenia z serverem
         }

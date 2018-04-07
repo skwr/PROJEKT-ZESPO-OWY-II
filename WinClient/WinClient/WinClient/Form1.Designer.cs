@@ -30,18 +30,19 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.buttonSend = new System.Windows.Forms.Button();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(74, 98);
+            this.textBox1.Location = new System.Drawing.Point(141, 188);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(139, 20);
             this.textBox1.TabIndex = 0;
             // 
             // buttonSend
             // 
-            this.buttonSend.Location = new System.Drawing.Point(97, 137);
+            this.buttonSend.Location = new System.Drawing.Point(164, 227);
             this.buttonSend.Name = "buttonSend";
             this.buttonSend.Size = new System.Drawing.Size(91, 23);
             this.buttonSend.TabIndex = 1;
@@ -49,14 +50,24 @@
             this.buttonSend.UseVisualStyleBackColor = true;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
+            // mainPanel
+            // 
+            this.mainPanel.Location = new System.Drawing.Point(12, 12);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(260, 170);
+            this.mainPanel.TabIndex = 2;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
+            this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.textBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -67,6 +78,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }
 
