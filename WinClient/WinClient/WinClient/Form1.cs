@@ -16,7 +16,7 @@ namespace WinClient
 {
     public partial class Form1 : Form
     {
-        
+        //komentarz na potrzeby testu git commit
 
         public Form1()
         {
