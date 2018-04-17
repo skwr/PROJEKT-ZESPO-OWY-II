@@ -1,7 +1,27 @@
-<form id="form">
-	<input type="text" id="inputText"></input>
-	<input type="submit" value="Przycisk  wysyłaniaaa"></input>
-</form>
+<!DOCTYPE >
+<html >
+<head>
+<title>CHAT</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+ 
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">WITAMY NA CHACIE <b></b></p>
+        <p class="logout"><a id="exit" href="#">Opusc czat</a></p>
+        <div style="clear:both"></div>
+    </div>
+     
+    <div id="chatbox"></div>
+     
+    <form name="wiadomosc" action="">
+        <input name="wiadom" type="text" id="wiadom" size="55" />
+        <input name="submit" type="submit"  id="submit" value="Wyslij wiadomosc" />
+    </form>
+</div>
+
+</body>
+</html>
 
 <script src="/socket.io/socket.io.js"></script>
 
