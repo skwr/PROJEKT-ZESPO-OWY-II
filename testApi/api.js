@@ -3,7 +3,7 @@ const app = express();					//
 
 const bodyParser = require('body-parser');	//dołączenie parsera dla tresci przesylanych przez POST
 
-
+app.use(express.static('public')); //dopisanie dodatkowych plikow
 
 var server = require('http').createServer(app);		//dołączenie servera http
 
