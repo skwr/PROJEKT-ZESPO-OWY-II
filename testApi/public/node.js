@@ -1,3 +1,4 @@
+
 	var form = document.getElementById('form');		//zapisanie formularza jako zmienna
 	
 	var socket = io.connect();	//ustanowienie polaczenia socket.io
