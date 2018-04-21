@@ -24,8 +24,6 @@
 		{
 			if(http.readyState == 4 && http.status == 200)
 			{
-				//reakcja na odpowiedź na żądanie
-				alert(http.response);
 			}
 		}
 		
@@ -34,7 +32,13 @@
 	
 	socket.on('newMessage', function(message)
 	{	
-		//wywoluje się w momencie otrzymania nowej wiadomosci
-		
-		console.log('socket - ' + message);
+		if(message.length != 0)
+		{
+		var element =  document.createElement("p");
+		element.id = "foo";
+		var wiadomosc = document.createTextNode(message);
+		element.appendChild(wiadomosc);
+		var okno = document.getElementById("chatbox");
+		okno.appendChild(element);
+		}
 	});
