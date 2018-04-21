@@ -1,4 +1,4 @@
-	//przenieść caly ponizszy kod do zewnetrznego pliku
+
 	var form = document.getElementById('form');		//zapisanie formularza jako zmienna
 	
 	var socket = io.connect();	//ustanowienie polaczenia socket.io
@@ -8,7 +8,7 @@
 	{
 		//wykonuje się w momencie zaakceptowania formularza (po nacisnieciu przycisku)
 		
-		var text = document.getElementById('inputText');	//zapisanie pola tekstowego jako zmienna
+		var text = document.getElementById('wiadom');	//zapisanie pola tekstowego jako zmienna
 		e.preventDefault();	//blokada przeładowywania strony po zaakceptowaniu formularza
 				
 		var http = new XMLHttpRequest();	//utworzenie obiektu żądania
