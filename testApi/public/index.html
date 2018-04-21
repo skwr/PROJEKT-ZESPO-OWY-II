@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html >
+<head>
+<title>CHAT</title>
+<link type="text/css" rel="stylesheet" href="style.css" />
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<meta charset="UTF-8">
+</head>
+ <body>
+<div id="wrapper">
+    <div id="menu">
+        <p class="welcome">WITAMY NA CHACIE <b></b></p>
+        <p class="logout"><a id="exit" href="#">Opusc czat</a></p>
+        <div style="clear:both"></div>
+    </div>
+    <div id="chatbox"></div>
+     
+    <form id="form">
+        <input type="text" id="wiadom" size="55" />
+        <input type="submit"  id="submit" />
+    </form>
+</div>
+    <div id="login">
+	<p id="helloworld">Podaj nick: </p>
+ 	<input type="text" id="nick" />
+	<input type="submit" id="ok" value="Zaloguj"/>
+ 	</div>
+<script src="login.js"></script> 
+<script src="node.js"></script> 
+</body>
+</html>
