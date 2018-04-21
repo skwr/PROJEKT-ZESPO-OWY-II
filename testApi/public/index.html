@@ -4,7 +4,7 @@
 <title>CHAT</title>
 <link type="text/css" rel="stylesheet" href="style.css" />
 <script src="/socket.io/socket.io.js"></script>
-<script src="node.js"></script> 
+
 <meta charset="UTF-8">
 </head>
  <body background="chatb.jpg">
@@ -17,11 +17,13 @@
      
     <div id="chatbox"></div>
      
-    <form name="wiadomosc" action="">
-        <input name="wiadom" type="text" id="wiadom" size="55" />
-        <input name="submit" type="submit"  id="submit" value="Wyslij wiadomosc" />
+    <form id="wiadomosc">
+        <input type="text" id="wiadom" size="55" />
+        <input type="submit"  id="submit" value="Wyslij wiadomosc" />
     </form>
 </div>
+
+<script src="node.js"></script> 
 
 </body>
 </html>

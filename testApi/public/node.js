@@ -1,7 +1,8 @@
 
-	var form = document.getElementById('form');		//zapisanie formularza jako zmienna
+	var form = document.getElementById('wiadomosc');		//zapisanie formularza jako zmienna
 	
 	var socket = io.connect();	//ustanowienie polaczenia socket.io
+	
 	
 	
 	form.onsubmit = function(e)
@@ -28,8 +29,8 @@
 			}
 		}
 		
-		http.send(params);	//przesyłanie żądania
-	}
+		http.send(params);	//przesyłanie żądania 
+	};
 	
 	socket.on('newMessage', function(message)
 	{	
