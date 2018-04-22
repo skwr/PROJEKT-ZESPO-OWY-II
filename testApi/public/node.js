@@ -29,7 +29,11 @@
 		
 		http.send(params);	//przesyłanie żądania 
 	};
-	
+	function updateScroll()
+   	{
+   		var element = document.getElementById("chatbox");
+    		element.scrollTop = element.scrollHeight;
+	}
 	socket.on('newMessage', function(message)
 	{	
 		if(message.length != 0)
@@ -40,5 +44,7 @@
 		element.appendChild(wiadomosc);
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);
+		updateScroll();
 		}
+		
 	});
