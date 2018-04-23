@@ -11,7 +11,7 @@ namespace WinClient
     class SingleMessage : Panel
     {
         int margin = 5;
-        public SingleMessage(Panel _parent, string _text, int loc)
+        public SingleMessage(Control _parent, string _text, int loc)
         {
             Parent = _parent;       //dodanie pojedynczej wiadomosci do MessagesBox
             Location = new Point(margin, loc);  //ustawienie pozycji nowej wiadomosci na podstawie parametru konstruktora

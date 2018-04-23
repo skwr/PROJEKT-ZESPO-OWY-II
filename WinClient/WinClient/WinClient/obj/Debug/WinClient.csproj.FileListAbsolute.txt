@@ -32,3 +32,5 @@ C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient
 C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.csproj.GenerateResource.Cache
 C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.exe
 C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.pdb
+C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.csproj.CoreCompileInputs.cache
+C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.csproj.CopyComplete

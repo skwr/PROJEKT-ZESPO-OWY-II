@@ -17,17 +17,25 @@ io.on('connection', function(socket){
 	socket.on('disconnect', function () {
     onDisconnect(socket);
   });
+  
+  socket.on('clientMessage', function(data){
+	console.log('[' + socket.id + '] [' + users[findUserInArray(socket.id)].name + '] wysłał wiadomość: ' + data)	//log tresci przekazanej w żądaniu
+	message = data;	//wyłuskanie wiadomosci z tresci przekazanej w żądaniu
+	
+	io.sockets.emit('newMessage', message);	//wywolanie eventu socket.io - rozeslanie zdobytej wiadomosci do wszystkich podlaczonych clientów
+	});
+	
+	socket.on('login', function(data){
+		users[findUserInArray(socket.id)].name = data;
+		console.log('zalogowano ' + socket.id + ' jako: ' + data);
+	});
 });
 
-//io.sockets.on('connection', onConnect);		//wywolanie funkcji onConnect po podlaczeniu dowolnego clienta
-
-//io.sockets.on('disconnect', onDisconnect);	//wywolanie funkcji onDisconnect po odlaczeniu dowolnego clienta
 
 
 
 app.use(bodyParser.urlencoded({ extended: true }));		//przypisanie parsera
 
-require('./index.js')(app, io);		//dołączenie index.js, ktore odpowiada za odbieranie żądan POST
 
 var users = [];
 
@@ -42,10 +50,12 @@ app.get('/', function(req, res){
 	res.sendFile(__dirname + '/index.html');	//odeslanie do przegladarki pliku 'index.html'
 });
 
+
+
 function onConnect(socket)
 {	
 	//wywolywane w momencie podlaczenia dowolnego clienta do servera
-	console.log('client connected ' + socket.id);
+	console.log('client connected [' + socket.id + ']');
 	var elem = {"id":socket.id, "name":""};
 	users.push(elem);
 }
@@ -54,20 +64,27 @@ function onDisconnect(socket)
 {
 	//wywolywane w momencie odlaczenia dowolnego clienta od servera
 	
+	console.log('client disconnected: [' + socket.id + '] [' + users[findUserInArray(socket.id)].name + ']');
+	users.splice(findUserInArray(socket.id), 1);
+	
+	
+}
+
+function findUserInArray(id)
+{
 	var index = -1;
 	
 	var i = 0;
 	while(index < 0 && i < users.length)
 	{
-		if(users[i].id === socket.id)
+		if(users[i].id === id)
 		{
 			index = i;
 		}
 		i++;
 	}
-	users.splice(index, 1);
 	
-	console.log('client disconnected ' + socket.id);
+	return index;
 }
 
 

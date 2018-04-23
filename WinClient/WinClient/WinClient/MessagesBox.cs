@@ -11,7 +11,7 @@ namespace WinClient
     class MessagesBox : Panel
     {
 
-        List<SingleMessage> listaWiadomosci = new List<SingleMessage>();    //lista przechowujaca wszystkie wstawione pola z wiadomosciami
+        public List<SingleMessage> listaWiadomosci = new List<SingleMessage>();    //lista przechowujaca wszystkie wstawione pola z wiadomosciami
         public MessagesBox(Panel _parent)
         {
             Parent = _parent;   //przypisanie glownego pola wszystkich wiadomosci do dowolnego panala
@@ -20,22 +20,30 @@ namespace WinClient
             Location = new Point(0, 0); //ustawienie w lewym gornym rogu
             BackColor = Color.Red;      //ustawienie koloru tla na czerwony na porzeby testow - do usuniecia/zmienienia
 
-            AddMessage("haloo");    //testowe, reczene wstawienie wiadomosci
-            AddMessage("siema");    //
-            AddMessage("trzecia wiadomosc");
+            
         }
 
-        public void AddMessage(string _text)
+        public delegate void NewMessage(string _message, MessagesBox _messageBox);
+
+        public NewMessage NM = new NewMessage(AddMessage);
+
+        private static void AddMessage(string _text, MessagesBox _messagesBox)
         {
             //funkcja dodajaca pojedyncza wiadomosc
 
 
-            int horizontalLocation = GetNextMessageHorizontalLocalization();    //lokalizacja nowej wiadomosci
+            int horizontalLocation = _messagesBox.GetNextMessageHorizontalLocalization();    //lokalizacja nowej wiadomosci
 
-           
-            SingleMessage m = new SingleMessage(this, _text, horizontalLocation);   //stworzenie nowej pojedynczej wiadomosci
-            listaWiadomosci.Add(m);     //dodanie wiadomosci do listy
+
+            SingleMessage m;
+            m = new SingleMessage(_messagesBox, _text, horizontalLocation);   //stworzenie nowej pojedynczej wiadomosci
+
+            
+
+            _messagesBox.listaWiadomosci.Add(m);     //dodanie wiadomosci do listy
         }
+
+        
 
         private int GetNextMessageHorizontalLocalization()
         {
