@@ -41,6 +41,7 @@
 		okno.appendChild(element);
 		}
 		updateScroll();
+		$('#wiadom').val('');
 	});
   
 

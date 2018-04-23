@@ -1,4 +1,9 @@
 /* CSS Document */
+:root
+{
+	background-image: url(costam.jpg);
+	background-size: 2000px 1024px;
+}
 body {
     font:11px tahoma;
     color: #222;
@@ -10,19 +15,24 @@ form, p, span {
     padding:0; }
   
 input { font:14px tahoma solid; }
-  
-a {
+ #czesc
+ {
+ 	display: none;
+ }
+a 
+{
     color:#0000FF;
-    text-decoration:none; }
+    text-decoration:none; 
+}
   
     a:hover { text-decoration:underline; }
   
 #wrapper, #loginform {
     margin:0 auto;
     padding-bottom:25px;
-    background:#99ccff;
     width:704px;
-    border:1px solid #ACD8F0; }
+	margin-top: 90px;
+	 }
  
 #loginform { padding-top:16px; }
   
@@ -33,11 +43,9 @@ a {
     margin:0 auto;
     margin-bottom:25px;
     padding:10px;
-    background:#ffccff;
-    height:270px;
-    width:630px;
-    border:2px solid #0066cc;
-    overflow: scroll;
+    height:370px;
+    width:650px;
+    overflow: hidden;
 	 }
   
 #wiadom {
@@ -48,11 +56,10 @@ a {
   
 #foo
 {
-	background-color: red;
 	padding-bottom: 6px;
 	padding-left: 6px;
 	margin-bottom: 8px;
-	border-bottom: 1px solid;
+	border: 1px solid;
 	font-size: 18px;
 }
 #wrapper
@@ -72,4 +79,9 @@ a {
 	font-size: 20px;
 	color: black;
 	margin-bottom: 10px;
+}
+#wiadom
+{
+	width: 550px;
+	heigtht: 200px;
 }
