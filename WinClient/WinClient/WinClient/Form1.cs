@@ -18,9 +18,12 @@ namespace WinClient
     {
         //komentarz na potrzeby testu git commit
 
-        Socket socket = IO.Socket("http://localhost:3000");    //laczenie z serverem
+
+        Socket socket;
 
         MessagesBox messagesBox;
+
+        
 
         public Form1()
         {
@@ -30,7 +33,25 @@ namespace WinClient
 
             Location = new Point(Screen.PrimaryScreen.WorkingArea.Width / 2 - Width / 2, 0);    //ustawienie okna programu na srodku ekranu
 
+            
             messagesBox = new MessagesBox(mainPanel);   //stworzenie instancji obiektu wyswietlajacego kolejne wiadomosci
+
+            try
+            {
+                socket = IO.Socket("http://localhost:3000");    //laczenie z serverem
+            }
+            catch
+            {
+
+                //nie dziala to do konca dobrze
+                MessageBox.Show("Błąd przy próbie połączenia z serverem!");
+
+                Application.Exit();
+                
+                return;
+            }
+
+
 
             socketIoMenager();  //inicjalizacja polaczenia z serverem; docelowo wywolywac po wybraniu NICKU, dodac obsluge braku polaczenia z serverem
         }
@@ -81,6 +102,10 @@ namespace WinClient
             {
                 
             }
+
+            
         }
+
+        
     }
 }

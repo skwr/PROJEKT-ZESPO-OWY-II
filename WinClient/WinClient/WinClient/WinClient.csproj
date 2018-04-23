@@ -63,6 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CustomDebugConsole.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomDebugConsole.Designer.cs">
+      <DependentUpon>CustomDebugConsole.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="SingleMessage.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="CustomDebugConsole.resx">
+      <DependentUpon>CustomDebugConsole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
