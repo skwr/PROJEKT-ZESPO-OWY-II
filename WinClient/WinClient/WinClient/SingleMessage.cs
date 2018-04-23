@@ -10,12 +10,12 @@ namespace WinClient
 {
     class SingleMessage : Panel
     {
-        int margin = 5;
-        public SingleMessage(Control _parent, string _text, int loc)
+        public int margin = 5;
+        public SingleMessage(Control _parent, string _text, int loc, int rightMargin)
         {
             Parent = _parent;       //dodanie pojedynczej wiadomosci do MessagesBox
             Location = new Point(margin, loc);  //ustawienie pozycji nowej wiadomosci na podstawie parametru konstruktora
-            Width = _parent.ClientSize.Width - 2 * margin;  //ustawienie szerokosci pojedynczej wiadomosci z uwzglednieniem marginesu //przerobic na margines globalny //zrobic marginesy prawy i lewy
+            Width = _parent.Width - 2 * margin - rightMargin;  //ustawienie szerokosci pojedynczej wiadomosci z uwzglednieniem marginesu //przerobic na margines globalny //zrobic marginesy prawy i lewy
             Height = 50;    //ustawienie wysokosci pojedynczej wiadomosci   //przerobic na wysokosc uzalezniona od tresci wiadomosci
             BackColor = Color.Yellow;       //ustawienie koloru tla na potrzeby testow // do usuniecia
 
