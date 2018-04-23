@@ -4,7 +4,10 @@ body {
     color: #222;
     text-align:center;
     padding:15px; }
-  
+#chatbox
+{
+	overflow: scroll;
+} 
 form, p, span {
     margin:0;
     padding:0; }
