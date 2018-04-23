@@ -10,9 +10,9 @@ $( document ).ready(function() {
 		sendUserName(nick);
 		
 		
-		
-		
 		return false;
+		
+		
 	});
 	$("#submit").click(function()
 	{
