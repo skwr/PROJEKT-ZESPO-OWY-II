@@ -11,20 +11,12 @@ $( document ).ready(function() {
 		
 		
 		return false;
-		
-		
-	});
-	$("#submit").click(function()
-	{
-		var scrollowanko = $("#foo");
-		
-		
-	
 	});
 	
 });
 
-function sendUserName(nick)
+/*function sendUserName(nick)
 {
 	socket.emit('login', nick);
 }
+*/
