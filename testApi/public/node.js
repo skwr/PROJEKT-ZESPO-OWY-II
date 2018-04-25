@@ -23,9 +23,9 @@
 	}
 
  	function sendUserName(nick)
-  {
-	socket.emit('login', nick);
-  }
+	{
+		socket.emit('login', nick);
+	}
   
      //wyswietlanie wiadomosci w divie + zabezpiecznie przed nowymi elementami
    //gdy brakuje tekstu
@@ -42,6 +42,19 @@
 		}
 		updateScroll();
 		$('#wiadom').val('');
+	});
+	
+	socket.on('newUsersList', function(message)
+	{
+		//TO DO: usuniecie i wyswietlenie w calosci nowej listy uzytkownikow
+		
+		//wywolywana jest w momencie podania przez kogokolwiek nicku i w momencie wylogowania kogokolwiek (rowniez odswiezenie strony)
+		//w ramach "bezpieczenstwa" mozna docelowo przerobić na przesylanie listy jedynie nickow, bez ID
+		//na tą chwile przesylani sa wszyscy uzytkownicy, rowniez ci podlaczeni ale nie zalogowani (niezalogowani posiadaja jedynie ID)
+		for(i = 0; i < message.length; i++)
+		{
+			console.log(message[i].name + ' - ' + message[i].id);
+		}
 	});
   
 

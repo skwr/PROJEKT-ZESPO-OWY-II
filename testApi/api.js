@@ -16,6 +16,7 @@ io.on('connection', function(socket){
 	
 	socket.on('disconnect', function () {
     onDisconnect(socket);
+	io.sockets.emit('newUsersList', users);
   });
   
   socket.on('clientMessage', function(data){
@@ -28,6 +29,7 @@ io.on('connection', function(socket){
 	socket.on('login', function(data){
 		users[findUserInArray(socket.id)].name = data;
 		console.log('zalogowano ' + socket.id + ' jako: ' + data);
+		io.sockets.emit('newUsersList', users);
 	});
 });
 
@@ -58,6 +60,8 @@ function onConnect(socket)
 	console.log('client connected [' + socket.id + ']');
 	var elem = {"id":socket.id, "name":""};
 	users.push(elem);
+	
+	
 }
 
 function onDisconnect(socket)
