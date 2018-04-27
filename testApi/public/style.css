@@ -16,7 +16,11 @@ form, p, span {
   
 input { font:14px tahoma solid; }
  #czesc
- {
+ {  
+    font-family: Garamond ; 
+    	font-weight: bold; 
+		font-size: 50px;
+		
  	display: none;
  }
 a 
@@ -31,7 +35,7 @@ a
     margin:0 auto;
     padding-bottom:25px;
     width:704px;
-	margin-top: 90px;
+	margin-top: px;
 	 }
  
 #loginform { padding-top:16px; }
@@ -75,10 +79,14 @@ a
 .msgln { margin:0 0 2px 0; }
 
 #helloworld
-{
-	font-size: 20px;
+{ 
+    
+	font-size: 30px;
 	color: black;
-	margin-bottom: 10px;
+	margin-bottom: 10px; 
+	font-family: Frutiger Std ; 
+    	font-weight: bold; 
+		padding-top:80px;
 }
 #wiadom
 {
