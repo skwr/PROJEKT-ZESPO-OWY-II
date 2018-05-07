@@ -1,8 +1,8 @@
 /* CSS Document */
 :root
 {
-	background-image: url(costam.jpg);
-	background-size: 2000px 1024px;
+	background-image: url(leo.jpg);
+	background-size: 1500px 1024px;
 }
 body {
     font:11px tahoma;
@@ -64,7 +64,7 @@ a
 	padding-left: 6px;
 	margin-bottom: 8px;
 	border: 1px solid;
-	font-size: 18px;
+	font-size: 10px;
 }
 #wrapper
 {
