@@ -2,7 +2,7 @@
 <html >
 <head>
 <title>CHAT</title>
-<link type="text/css" rel="stylesheet" href="style.css" />
+<link type="text/css" rel="stylesheet" id="theme" href="style.css" />
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="UTF-8">
@@ -20,6 +20,10 @@
         <input type="submit"  id="submit" value="Wyślij wiadomość" />
     </form>
 </div>
+<div id="themebtn">
+<button type="button" id="light">light</button>
+ <button type="button" id="dark">dark</button>
+</div>
     <form id="login">
 	<p id="helloworld">Podaj nick: </p>
  	<input type="text" id="nick" />
@@ -27,5 +31,6 @@
  	</form>
 <script src="login.js"></script> 
 <script src="node.js"></script> 
+<script src="theme.js"></script>
 </body>
 </html>
