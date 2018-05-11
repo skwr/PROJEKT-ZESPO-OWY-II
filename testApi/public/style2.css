@@ -5,7 +5,7 @@
 }
 body {
     font:11px tahoma;
-    color: #222;
+    color: #FFFFFF;
     text-align:center;
     padding:15px; }
   
@@ -81,7 +81,7 @@ a
 { 
     
 	font-size: 30px;
-	color: black;
+	color: white;
 	margin-bottom: 10px; 
 	font-family: Frutiger Std ; 
     	font-weight: bold; 
