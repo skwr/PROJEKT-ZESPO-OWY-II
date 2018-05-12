@@ -29,14 +29,14 @@
   
      //wyswietlanie wiadomosci w divie + zabezpiecznie przed nowymi elementami
    //gdy brakuje tekstu
-   socket.on('newMessage', function(message)
+   socket.on('newMessage', function(message, sender)
    {	
 		
-		if(message.contents.length != 0)
+		if(message.length != 0)
 		{
 		var element =  document.createElement("p");
 		element.id = "foo";
-		var wiadomosc = document.createTextNode(message.sender +" : " + message.contents);
+		var wiadomosc = document.createTextNode(sender +" : " + message);
 		element.appendChild(wiadomosc);
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);

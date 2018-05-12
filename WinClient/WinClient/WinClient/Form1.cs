@@ -11,11 +11,12 @@ using Newtonsoft.Json;
 using System.Windows.Forms;
 using Quobject.SocketIoClientDotNet.Client;
 using System.Net;
+using System.Web;
 
 namespace WinClient
 {
+   
 
-    
 
     public partial class Form1 : Form
     {
@@ -96,7 +97,9 @@ namespace WinClient
 
         private void SendMessage(string _message)
         {
-            socket.Emit("clientMessage", _message);
+
+            
+            socket.Emit("clientMessage", _message, myNickName);
 
             
         }
