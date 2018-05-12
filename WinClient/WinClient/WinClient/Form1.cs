@@ -99,7 +99,7 @@ namespace WinClient
         {
 
             
-            socket.Emit("clientMessage", _message, myNickName);
+            socket.Emit("clientMessage", _message);
 
             
         }

@@ -34,23 +34,23 @@
 		
 		if(message.length != 0)
 		{
-<<<<<<< HEAD
+
 		var element =  document.createElement("p");
 		element.id = "foo";
 		var wiadomosc = document.createTextNode(sender +" : " + message);
 		element.appendChild(wiadomosc);
-=======
+
 		var elementPierwszy =  document.createElement("p");
 		elementPierwszy.id = "nazwaUzytkownika";
 		var elementDrugi =  document.createElement("p");
 		elementDrugi.id = "foo";
 		///
-		var wiadomoscPierwsza = document.createTextNode(message.sender +" napisał: ");
+		var wiadomoscPierwsza = document.createTextNode(sender +" napisał: ");
 		elementPierwszy.appendChild(wiadomoscPierwsza);
-		var wiadomoscDruga = document.createTextNode(message.contents);
+		var wiadomoscDruga = document.createTextNode(message);
 		elementDrugi.appendChild(wiadomoscDruga);
 		///
->>>>>>> fc7755d72b759f597ccf134166f8b9ed9fc88f1c
+
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(elementPierwszy);
 		okno.appendChild(elementDrugi);
