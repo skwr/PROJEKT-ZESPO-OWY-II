@@ -31,17 +31,20 @@
    //gdy brakuje tekstu
    socket.on('newMessage', function(message)
    {	
-		if(message.length != 0)
+		
+		if(message.contents.length != 0)
 		{
 		var element =  document.createElement("p");
 		element.id = "foo";
-		var wiadomosc = document.createTextNode(message);
+		var wiadomosc = document.createTextNode(message.contents);
 		element.appendChild(wiadomosc);
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);
 		$('#wiadom').val('');
 		}
 		updateScroll();
+		
+		alert(message.sender);
 	});
 	
 	socket.on('newUsersList', function(message)
@@ -53,18 +56,7 @@
 		//na tą chwile przesylani sa wszyscy uzytkownicy, rowniez ci podlaczeni ale nie zalogowani (niezalogowani posiadaja jedynie ID)
 
 		
-		for(i = 0; i < message.length; i++)
-		{
-		if(i != 0)
-		{
-		var element =  document.createElement("p");
-		element.id = "foo";
-		var wiadomosc = document.createTextNode(message);
-		element.appendChild(wiadomosc);
-		var okno = document.getElementById("chatbox");
-		okno.appendChild(element);
-		}
-		}
+		
 	});
   
 
