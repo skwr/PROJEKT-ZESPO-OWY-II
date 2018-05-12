@@ -1,0 +1,98 @@
+:root
+{
+	background-image: url(chatb.jpg);
+	background-size: 1500px 1024px;
+}
+body {
+    font:11px tahoma;
+    color: #FFFFFF;
+    text-align:center;
+    padding:15px; }
+  
+form, p, span {
+    margin:0;
+    padding:0; }
+  
+input { font:14px tahoma solid; }
+ #czesc
+ {  
+    font-family: Garamond ; 
+    	font-weight: bold; 
+		font-size: 50px;
+		
+ 	display: none;
+ }
+a 
+{
+    color:#0000FF;
+    text-decoration:none; 
+}
+  
+    a:hover { text-decoration:underline; }
+  
+#wrapper, #loginform {
+    margin:0 auto;
+    padding-bottom:25px;
+    width:704px;
+	margin-top: px;
+	 }
+ 
+#loginform { padding-top:16px; }
+  
+    #loginform p { margin: 5px; }
+  
+#chatbox {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:25px;
+    padding:10px;
+    height:370px;
+    width:650px;
+    overflow: hidden;
+	 }
+  
+#wiadom {
+    width:360px;
+    border:1px solid #ACD8F0; }
+  
+#submit { width: 120px; }
+  
+#foo
+{
+	padding-bottom: 6px;
+	padding-left: 6px;
+	margin-bottom: 8px;
+	border: 1px solid;
+	font-size: 10px;
+}
+#wrapper
+{
+	display: none;
+}
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.welcome { float:left; font-weight: bold; }
+  
+.logout { float:right; }
+  
+.msgln { margin:0 0 2px 0; }
+
+#helloworld
+{ 
+    
+	font-size: 30px;
+	color: white;
+	margin-bottom: 10px; 
+	font-family: Frutiger Std ; 
+    	font-weight: bold; 
+		padding-top:80px;
+}
+#wiadom
+{
+	width: 550px;
+	heigtht: 200px;
+}
+#themebtn
+{
+	float:left;
+}

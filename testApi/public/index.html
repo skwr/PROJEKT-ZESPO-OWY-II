@@ -2,7 +2,7 @@
 <html >
 <head>
 <title>CHAT</title>
-<link type="text/css" rel="stylesheet" href="style.css" />
+<link type="text/css" rel="stylesheet" id="theme" href="style.css" />
 <script src="/socket.io/socket.io.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <meta charset="UTF-8">
@@ -10,15 +10,24 @@
  <body>
 <div id="wrapper">
     <div id="menu">
-        <h1 id="czesc">Witamy na chacie</h1>
+        <h1 id="czesc">Witamy na czacie</h1>
         <div style="clear:both"></div>
     </div>
     <div id="chatbox"></div>
      
     <form id="wiadomosc">
+<<<<<<< HEAD
         <input type="text" id="wiadom" autocomplete="off"/>
         <input type="submit"  id="submit" />
+=======
+        <input type="text" id="wiadom"/>
+        <input type="submit"  id="submit" value="Wyślij wiadomość" />
+>>>>>>> c079f082be1093fe632f37dac1fd84de23a5e724
     </form>
+</div>
+<div id="themebtn">
+<button type="button" id="light">light</button>
+ <button type="button" id="dark">dark</button>
 </div>
     <form id="login">
 	<p id="helloworld">Podaj nick: </p>
@@ -27,5 +36,6 @@
  	</form>
 <script src="login.js"></script> 
 <script src="node.js"></script> 
+<script src="theme.js"></script>
 </body>
 </html>
