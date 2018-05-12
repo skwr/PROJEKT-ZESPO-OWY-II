@@ -21,7 +21,13 @@ io.on('connection', function(socket){
   
   socket.on('clientMessage', function(data){
 	console.log('[' + socket.id + '] [' + users[findUserInArray(socket.id)].name + '] wysłał wiadomość: ' + data)	//log tresci przekazanej w żądaniu
-	message = data;	//wyłuskanie wiadomosci z tresci przekazanej w żądaniu
+	//message = data;	//wyłuskanie wiadomosci z tresci przekazanej w żądaniu
+	
+	message = 
+	{
+		"contents":data,
+		"sender": users[findUserInArray(socket.id)].name
+	};
 	
 	io.sockets.emit('newMessage', message);	//wywolanie eventu socket.io - rozeslanie zdobytej wiadomosci do wszystkich podlaczonych clientów
 	});
