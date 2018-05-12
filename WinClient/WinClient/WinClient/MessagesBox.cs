@@ -13,7 +13,7 @@ namespace WinClient
 
         bool scrollMeDown = false;
 
-        CustomDebugConsole cons;
+        
 
         Timer timer;
 
@@ -37,7 +37,7 @@ namespace WinClient
             timer.Tick += new EventHandler(Timer_tick);
             
 
-            cons = new CustomDebugConsole();
+            
 
         }
 
@@ -85,9 +85,7 @@ namespace WinClient
             int change = 10;
             int newValue = currentValue;
 
-            cons.logValue(0, "currentValue", currentValue.ToString());
-            cons.logValue(1, "maxValue", maxValue.ToString());
-            cons.logValue(2, "difference", (maxValue - currentValue).ToString());
+            
 
             if (currentValue >= maxValue - VerticalScroll.LargeChange - 1)
             {
@@ -156,7 +154,6 @@ namespace WinClient
         private void Timer_tick(object sender, EventArgs e)
         {
             ScrollDown();
-            cons.println(DateTime.Now.ToString());
         }
     }
 }
