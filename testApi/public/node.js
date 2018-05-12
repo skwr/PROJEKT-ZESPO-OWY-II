@@ -40,31 +40,18 @@
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);
 		$('#wiadom').val('');
+		
 		}
 		updateScroll();
 	});
 	
-	socket.on('newUsersList', function(message)
+	socket.on('newUsersList', function(users)
 	{
-		//TO DO: usuniecie i wyswietlenie w calosci nowej listy uzytkownikow
-		
-		//wywolywana jest w momencie podania przez kogokolwiek nicku i w momencie wylogowania kogokolwiek (rowniez odswiezenie strony)
-		//w ramach "bezpieczenstwa" mozna docelowo przerobić na przesylanie listy jedynie nickow, bez ID
-		//na tą chwile przesylani sa wszyscy uzytkownicy, rowniez ci podlaczeni ale nie zalogowani (niezalogowani posiadaja jedynie ID)
-
-		
-		for(i = 0; i < message.length; i++)
-		{
-		if(i != 0)
-		{
 		var element =  document.createElement("p");
-		element.id = "foo";
-		var wiadomosc = document.createTextNode(message);
+		var wiadomosc = document.createTextNode(users[0].name);
 		element.appendChild(wiadomosc);
-		var okno = document.getElementById("chatbox");
+		var okno = document.getElementById("koledzy");
 		okno.appendChild(element);
-		}
-		}
 	});
   
 

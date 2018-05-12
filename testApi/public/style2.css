@@ -18,8 +18,7 @@ input { font:14px tahoma solid; }
  {  
     font-family: Garamond ; 
     	font-weight: bold; 
-		font-size: 50px;
-		
+	font-size: 18px;
  	display: none;
  }
 a 
@@ -32,14 +31,12 @@ a
   
 #wrapper, #loginform {
     margin:0 auto;
-    padding-bottom:25px;
     width:704px;
-	margin-top: px;
 	 }
  
 #loginform { padding-top:16px; }
   
-    #loginform p { margin: 5px; }
+ #loginform p { margin: 5px; }
   
 #chatbox {
     text-align:left;
@@ -63,7 +60,7 @@ a
 	padding-left: 6px;
 	margin-bottom: 8px;
 	border: 1px solid;
-	font-size: 10px;
+	font-size: 14px;
 }
 #wrapper
 {

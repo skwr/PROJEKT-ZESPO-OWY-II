@@ -7,6 +7,7 @@ $( document ).ready(function() {
 		$("#wrapper").fadeIn(1000);
 		$("#czesc").fadeIn(2000);
 		$("#users").fadeIn(2000);
+		$("#koledzy").fadeIn(2000);
 		$("#login").hide();
 		var nick = $("#nick").val();
 		sendUserName(nick);

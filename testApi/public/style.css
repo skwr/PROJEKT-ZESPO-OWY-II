@@ -1,16 +1,13 @@
 /* CSS Document */
 :root
 {
-	background-image: url(chatb.jpg);
-	background-size: 2000px 1024px;
 	background-image: url(leo.jpg);
 	background-size: 1500px 1024px;
 }
 body {
     font:11px tahoma;
-    color: #222;
     text-align:center;
-    padding:15px; }
+}
   
 form, p, span {
     margin:0;
@@ -22,7 +19,7 @@ input { font:14px tahoma solid; }
  {  
     font-family: Garamond ; 
     	font-weight: bold; 
-		font-size: 50px;
+	font-size: 18px;
 		
  	display: none;
  }
@@ -36,12 +33,11 @@ a
   
 #wrapper, #loginform {
     margin:0 auto;
-    padding-bottom:25px;
+
     width:704px;
 	margin-top: 90px;
 	position: relative;
-	margin-top: px;
-	 }
+ }
  
 #loginform { padding-top:16px; }
   
@@ -79,7 +75,7 @@ a
 	padding-left: 6px;
 	margin-bottom: 8px;
 	border: 1px solid;
-	font-size: 10px;
+	font-size: 14px;
 }
 #wrapper
 {
@@ -101,7 +97,7 @@ a
 	margin-bottom: 10px; 
 	font-family: Frutiger Std ; 
     	font-weight: bold; 
-		padding-top:80px;
+	padding-top:80px;
 }
 #wiadom
 {
@@ -111,4 +107,14 @@ a
 #themebtn
 {
 	float:left;
+}
+#koledzy
+{
+	position: absolute;
+	border: 1px solid;
+	width: 150px;
+	height: 500px;
+	right: 10%;
+	top: 15%;
+	display: none;
 }
