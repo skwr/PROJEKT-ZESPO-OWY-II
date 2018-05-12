@@ -74,8 +74,9 @@ a
 	padding-bottom: 6px;
 	padding-left: 6px;
 	margin-bottom: 8px;
-	border: 1px solid;
+	border-bottom: 0.5px solid;
 	font-size: 14px;
+	border-color: red;
 }
 #wrapper
 {
@@ -117,4 +118,30 @@ a
 	right: 10%;
 	top: 15%;
 	display: none;
+}
+#light
+{
+	position: absolute;
+	margin-top: 35px;
+	left: 2%;
+	top: 0;
+}
+#dark
+{
+	position: absolute;
+	margin-top: 35px;
+	left: 6%;
+	top: 0;
+}
+#layout
+{
+	position: absolute;
+	margin-left: 18px;
+	font-size: 16px;
+	top: 0;
+}
+#nazwaUzytkownika
+{
+	margin-bottom: 5px;
+	font-size: 14px;
 }
