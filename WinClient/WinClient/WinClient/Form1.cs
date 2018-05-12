@@ -128,6 +128,7 @@ namespace WinClient
             {
                 myNickName = loginForm.nickNameTextBox.Text;
                 loginForm.Dispose();
+                socket.Emit("login", myNickName);
                 Enabled = true;
                 Focus();
             }
