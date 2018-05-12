@@ -117,15 +117,24 @@ a
 #koledzy
 {
 	position: absolute;
-	border: 1px solid;
 	width: 150px;
 	height: 500px;
+	right: 9%;
+	top: 15%;
+	display: none;
+}
+#nameff
+{
+	position: absolute;
 	right: 10%;
-	top: 8%;
+	top: 10%;
+	font-size: 22px;
+	color: white;
 	display: none;
 }
 #nazwaUzytkownika
 {
 	margin-bottom: 5px;
 	font-size: 14px;
+	color: white;
 }
