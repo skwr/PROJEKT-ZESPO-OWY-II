@@ -36,14 +36,13 @@
 		{
 		var element =  document.createElement("p");
 		element.id = "foo";
-		var wiadomosc = document.createTextNode(message.contents);
+		var wiadomosc = document.createTextNode(message.sender +" : " + message.contents);
 		element.appendChild(wiadomosc);
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);
 		$('#wiadom').val('');
 		}
 		updateScroll();
-		alert(message.sender);
 	});
 	
 	socket.on('newUsersList', function(message)
