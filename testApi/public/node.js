@@ -39,9 +39,9 @@
 		element.appendChild(wiadomosc);
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);
+		$('#wiadom').val('');
 		}
 		updateScroll();
-		$('#wiadom').val('');
 	});
 	
 	socket.on('newUsersList', function(message)
@@ -59,7 +59,7 @@
 		{
 		var element =  document.createElement("p");
 		element.id = "foo";
-		var wiadomosc = document.createTextNode("Witamy: " + message[i].name);
+		var wiadomosc = document.createTextNode(message);
 		element.appendChild(wiadomosc);
 		var okno = document.getElementById("chatbox");
 		okno.appendChild(element);
