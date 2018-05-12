@@ -14,20 +14,28 @@ using System.Net;
 
 namespace WinClient
 {
+
+    
+
     public partial class Form1 : Form
     {
         //komentarz na potrzeby testu git commit
 
+        string myNickName = "";
 
         Socket socket;
 
         MessagesBox messagesBox;
 
-        
+        LoginForm loginForm;
 
         public Form1()
         {
             InitializeComponent();  //inicjalizacja komponentow
+
+            
+            
+            
             Width = 400;    //tymczasowe ustawienie stalej szerokosci okna
             Height = Screen.PrimaryScreen.WorkingArea.Height;   //ustawienie wysokosci okna w zaleznosci od wielkosci ekranu komputera
 
@@ -54,6 +62,11 @@ namespace WinClient
 
 
             socketIoMenager();  //inicjalizacja polaczenia z serverem; docelowo wywolywac po wybraniu NICKU, dodac obsluge braku polaczenia z serverem
+
+            Show();
+            Enabled = false;
+            loginForm = new LoginForm();
+            loginForm.loginButton.Click += new EventHandler(Login_Clicked);
         }
 
         private void socketIoMenager()
@@ -104,6 +117,22 @@ namespace WinClient
             }
 
             
+        }
+
+        private void Login_Clicked(object sender, EventArgs e)
+        {
+            if (loginForm.nickNameTextBox.Text != String.Empty)
+            {
+                myNickName = loginForm.nickNameTextBox.Text;
+                loginForm.Dispose();
+                Enabled = true;
+                Focus();
+            }
+            else
+            {
+                MessageBox.Show("Aby zalogować się, musisz podać nick");
+            }
+
         }
 
         

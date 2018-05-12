@@ -35,3 +35,4 @@ C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient
 C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.csproj.CoreCompileInputs.cache
 C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.csproj.CopyComplete
 C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.CustomDebugConsole.resources
+C:\Users\Julek\Desktop\testApi\WinClient\WinClient\WinClient\obj\Debug\WinClient.LoginForm.resources
