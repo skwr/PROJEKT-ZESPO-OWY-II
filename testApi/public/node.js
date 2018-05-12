@@ -12,7 +12,7 @@
 		var text = document.getElementById('wiadom').value;	//zapisanie wartosci pola tekstowego jako zmienna
 		socket.emit('clientMessage', text);
 		e.preventDefault();
-		
+		$('#wiadom').val('');
 	};
 	
 	//odswiezenie scrolla do nowych wiadomosci
@@ -55,7 +55,7 @@
 		okno.appendChild(elementPierwszy);
 		okno.appendChild(elementDrugi);
 		///
-		$('#wiadom').val('');
+		
 		}
 		updateScroll();
 	});
