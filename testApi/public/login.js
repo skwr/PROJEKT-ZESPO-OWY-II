@@ -3,7 +3,6 @@
 $( document ).ready(function() {
 
     $("#ok").click(function(){
-		
 		$("#wrapper").fadeIn(1000);
 		$("#czesc").fadeIn(2000);
 		$("#users").fadeIn(2000);

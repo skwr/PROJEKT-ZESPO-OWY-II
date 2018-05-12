@@ -34,25 +34,49 @@
 		
 		if(message.length != 0)
 		{
+<<<<<<< HEAD
 		var element =  document.createElement("p");
 		element.id = "foo";
 		var wiadomosc = document.createTextNode(sender +" : " + message);
 		element.appendChild(wiadomosc);
+=======
+		var elementPierwszy =  document.createElement("p");
+		elementPierwszy.id = "nazwaUzytkownika";
+		var elementDrugi =  document.createElement("p");
+		elementDrugi.id = "foo";
+		///
+		var wiadomoscPierwsza = document.createTextNode(message.sender +" napisał: ");
+		elementPierwszy.appendChild(wiadomoscPierwsza);
+		var wiadomoscDruga = document.createTextNode(message.contents);
+		elementDrugi.appendChild(wiadomoscDruga);
+		///
+>>>>>>> fc7755d72b759f597ccf134166f8b9ed9fc88f1c
 		var okno = document.getElementById("chatbox");
-		okno.appendChild(element);
+		okno.appendChild(elementPierwszy);
+		okno.appendChild(elementDrugi);
+		///
 		$('#wiadom').val('');
 		}
 		updateScroll();
 	});
 	
-	socket.on('newUsersList', function(message)
+	socket.on('newUsersList', function(users)
 	{
 		//TO DO: usuniecie i wyswietlenie w calosci nowej listy uzytkownikow
 		
 		//wywolywana jest w momencie podania przez kogokolwiek nicku i w momencie wylogowania kogokolwiek (rowniez odswiezenie strony)
 		//w ramach "bezpieczenstwa" mozna docelowo przerobić na przesylanie listy jedynie nickow, bez ID
 		//na tą chwile przesylani sa wszyscy uzytkownicy, rowniez ci podlaczeni ale nie zalogowani (niezalogowani posiadaja jedynie ID)
-
 		
-		
+		$("#koledzy").empty()
+		var i = 0;
+		for(i ; i < users.length ; i++ )
+		{
+		var nickParagraf =  document.createElement("p");
+		nickParagraf.id = "nazwaUzytkownika";
+		var nick = document.createTextNode(users[i].name);
+		nickParagraf.appendChild(nick)
+		var oknoUzytkownicy = document.getElementById("koledzy");
+		oknoUzytkownicy.appendChild(nickParagraf);
+		}
 });
