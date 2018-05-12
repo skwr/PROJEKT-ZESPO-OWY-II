@@ -51,9 +51,19 @@
 		//wywolywana jest w momencie podania przez kogokolwiek nicku i w momencie wylogowania kogokolwiek (rowniez odswiezenie strony)
 		//w ramach "bezpieczenstwa" mozna docelowo przerobić na przesylanie listy jedynie nickow, bez ID
 		//na tą chwile przesylani sa wszyscy uzytkownicy, rowniez ci podlaczeni ale nie zalogowani (niezalogowani posiadaja jedynie ID)
+
+		
 		for(i = 0; i < message.length; i++)
 		{
-			console.log(message[i].name + ' - ' + message[i].id);
+		if(i != 0)
+		{
+		var element =  document.createElement("p");
+		element.id = "foo";
+		var wiadomosc = document.createTextNode("Witamy: " + message[i].name);
+		element.appendChild(wiadomosc);
+		var okno = document.getElementById("chatbox");
+		okno.appendChild(element);
+		}
 		}
 	});
   
